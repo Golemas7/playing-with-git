@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+#mainNav {
+    background: #000;
+    min-height: 36px;
+}
+
+#mainNav .container {
+    display: flex;
+}
+
+#logo {
+    height: 36px;
+    float: left;
+}
+
+#mainNav ul {
+    color: #fff;
+    list-style: none;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+#mainNav ul li {
+    float: left;
+    padding: 1em 1em;
+}
+
+#mainNav .ul1 {
+    margin: auto;
+}
+
+#mainNav .ul2 {
+    float: right;
+}
