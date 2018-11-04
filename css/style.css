@@ -3,75 +3,161 @@
     padding: 0;
 }
 
+
+
 /* Global */
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
 .container {
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
 }
 
-.navBox {
-    flex-grow: 1;
-    flex-basis: 0;
-}
 
+
+/* Nav */
 #mainNav {
-    background: #000;
-    min-height: 36px;
+    background-color: #000;
 }
 
 #mainNav .container {
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
 
-#mainNav img {
-    height: 36px;
+#mainNav .container .navBox {
+    flex: 1 1 0;
 }
 
 #logo {
-    /* height: 36px; */
-    float: left;
+    height: 32px;
+    padding: 0.5em 0;
 }
 
-#mainNav ul {
-    color: #fff;
-    list-style: none;
+#mainNav .container .navBox ul li {
+    float: left;
     font-size: 0.7rem;
+}
+
+#mainNav .container .navBox ul li button {
+    font-size: 1em;
+}
+
+#mainNav .container .navBox ul.nav-main-links {
+    display: flex;
+    min-width: 280px;
+}
+
+#mainNav .container .navBox ul.nav-main-links li {
+    flex: 1 1 auto;
     text-transform: uppercase;
-    /* box-sizing: border-box; */
 }
 
-#mainNav ul li {
-    float: left;
-    padding: 1em 0;
-}
-
-
-#mainNav .ul1 li {
-    width: 25%;
-    text-align: center;
-}
-
-#mainNav ul li a {
+#mainNav .container .navBox ul.nav-main-links li a {
     color: #ccc;
-    text-decoration: none;
 }
 
-#mainNav ul li a:hover {
+#mainNav .container .navBox ul.nav-side-links {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 120px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+#mainNav .container .navBox ul.nav-side-links li {
+    flex: 0 1 auto;
+    margin-right: 7%;
+}
+
+#mainNav .container .navBox ul.nav-side-links li a {
     color: #fff;
 }
 
-#mainNav .ul2 {
-    float: right;
+#mainNav .container .navBox ul li.active a, #mainNav .container .navBox ul li a:hover {
+    color: #fff; 
 }
 
 
-#mainNav .ul2 li {
-    padding: 1em;
+
+
+/* Dropdown */
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+}
+
+/* Dropdown Button */
+.dropdown-btn {
+    padding: 0;
+    margin: 0;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropdown:hover, .dropdown:focus, .dropdown-btn:hover, .dropdown-btn:focus {
+    color: #ccc;
 }
 
 
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #fff;
+    padding: .8rem 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    color: #fff;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display: block;}
+
+/* Dropdown Image */
+.dropdown-btn img {
+    border-radius: 15%;
+    height: 32px;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-btn img, .dropdown-btn span, .dropdown-btn i {
+    flex: 0 1 auto;
+    margin-right: 15%;
+}
