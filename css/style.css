@@ -93,6 +93,13 @@ a {
 }
 
 
+#mainNav #navIcon img {
+    display: none;
+    height: 32px;
+    padding: 0.5em 0;
+    float: right;
+}
+
 
 
 /* Dropdown */
@@ -160,4 +167,18 @@ a {
 .dropdown-btn img, .dropdown-btn span, .dropdown-btn i {
     flex: 0 1 auto;
     margin-right: 15%;
+}
+
+
+/* Media QUERY */
+@media(max-width: 640px) {
+
+    #mainNav #navIcon img {
+        display: inline-block;
+    }
+
+    nav ul li {
+        display: none;
+    }
+
 }
